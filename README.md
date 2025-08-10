@@ -1,4 +1,4 @@
-bilibili五字_小树自制Van♂Doors 1145141919810工具(请勿在实体机打开)
+bilibili五字_小树自制病毒(请勿在实体机打开)
 注:可以先用NSudo提取权限后打开
 bat编写后打包的,代码非常混乱,轻点喷
 作者:https://space.bilibili.com/3493276898298079
